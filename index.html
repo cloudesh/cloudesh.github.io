@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kupo Skribbl — FFXIV drawing and guessing game | Kupopop</title>
+  <meta name="description" content="Draw, guess and play together in Final Fantasy XIV. Kupo Skribbl is a multiplayer Pictionary-style game for 2–16 players, available as a custom Dalamud plugin.">
+  <link rel="canonical" href="https://cloudesh.github.io/">
+  <link rel="icon" type="image/png" href="assets/icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cloudesh.github.io/">
+  <meta property="og:title" content="Kupo Skribbl — draw and guess in FFXIV">
+  <meta property="og:description" content="A Pictionary-style game for 2–16 players, inside Final Fantasy XIV through Dalamud / XIVLauncher.">
+  <meta property="og:image" content="https://cloudesh.github.io/assets/banner.png">
+  <meta name="theme-color" content="#f4ebdc">
+  <style>
+    :root { color-scheme: light; --paper:#fffaf0; --ink:#352c2a; --muted:#6b5b55; --rose:#8e425d; --rule:#d8c5ad; }
+    * { box-sizing: border-box; }
+    body { margin:0; background:#f4ebdc; color:var(--ink); font:17px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif; }
+    a { color:var(--rose); text-underline-offset:4px; }
+    a:hover { text-decoration-thickness:2px; }
+    a:focus-visible { outline:3px solid var(--rose); outline-offset:5px; border-radius:3px; }
+    .skip { position:absolute; left:16px; top:-100px; background:var(--paper); padding:8px 16px; }
+    .skip:focus { top:12px; }
+    .page { width:min(920px,calc(100% - 40px)); margin:auto; }
+    header { display:flex; justify-content:space-between; gap:20px; padding:24px 0; font-size:14px; }
+    header a { color:var(--muted); }
+    .brand { color:var(--ink); font-weight:700; text-decoration:none; letter-spacing:.04em; }
+    main { background:var(--paper); border:1px solid var(--rule); box-shadow:5px 6px 0 #e4d7c6; }
+    .banner { display:block; width:100%; height:auto; border-bottom:1px solid var(--rule); }
+    .content { padding:36px 48px 42px; }
+    .eyebrow { margin:0 0 8px; color:var(--rose); font-size:13px; font-weight:700; letter-spacing:.11em; text-transform:uppercase; }
+    h1,h2 { font-family:Georgia,"Times New Roman",serif; line-height:1.15; }
+    h1 { font-size:clamp(38px,7vw,58px); margin:0 0 16px; letter-spacing:-.025em; }
+    h2 { font-size:28px; margin:0 0 16px; }
+    p { margin:0 0 18px; }
+    .intro { max-width:670px; font-size:20px; }
+    .muted { color:var(--muted); }
+    .actions { display:flex; flex-wrap:wrap; gap:14px; align-items:center; margin:26px 0 18px; }
+    .button { display:inline-flex; min-height:46px; align-items:center; padding:10px 20px; color:var(--paper); background:var(--rose); border:1px solid var(--rose); border-radius:5px; font-weight:650; text-decoration:none; }
+    .button:hover { background:#74354c; }
+    .secondary { padding:10px 4px; }
+    .notice { color:var(--muted); font-size:14px; max-width:650px; }
+    section { margin-top:32px; padding-top:28px; border-top:1px solid var(--rule); }
+    ol { margin:0; padding-left:24px; }
+    li { margin-bottom:10px; padding-left:5px; }
+    .details { display:grid; grid-template-columns:1fr 1fr; gap:28px; }
+    .details h2 { font-size:24px; }
+    .details p { font-size:15px; margin-bottom:0; }
+    footer { padding:24px 0 32px; color:var(--muted); font-size:13px; }
+    footer p { margin:0 0 6px; }
+    @media (max-width:600px) {
+      .page { width:calc(100% - 28px); }
+      header { padding:18px 0; }
+      .content { padding:26px 24px 30px; }
+      .intro { font-size:18px; }
+      .details { grid-template-columns:1fr; gap:24px; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="page">
+    <header>
+      <a class="brand" href="https://cloudesh.github.io/">Kupopop</a>
+      <a href="https://github.com/cloudesh">cloudesh on GitHub ↗</a>
+    </header>
+    <main id="main">
+      <img class="banner" src="assets/banner.png" alt="A moogle and pencil on an open drawing book" width="1200" height="320">
+      <div class="content">
+        <p class="eyebrow">Draw together. Guess together.</p>
+        <h1>Kupo Skribbl</h1>
+        <p class="intro">A Pictionary-style drawing and guessing game inside <strong>Final Fantasy XIV</strong>, for 2–16 players.</p>
+        <p class="muted">Bring your friends, take turns drawing and race to guess the word. Kupo Skribbl is Kupopop’s drawing game for Dalamud / XIVLauncher, connecting everyone to one shared server.</p>
+        <div class="actions">
+          <a class="button" href="https://github.com/cloudesh/kupopop#install-in-dalamud">Installation guide ↗</a>
+          <a class="secondary" href="https://github.com/cloudesh/kupopop">Explore the GitHub repository ↗</a>
+        </div>
+        <p class="notice">An experimental, unofficial community plugin, installed through a custom repository. Requires Dalamud / XIVLauncher; each player needs the plugin. Not listed in the official Dalamud repository.</p>
+        <section aria-labelledby="play-heading">
+          <h2 id="play-heading">A little drawing, a lot of guessing</h2>
+          <ol>
+            <li>Join via code, host a room or browse public lobbies.</li>
+            <li>On your turn, choose a word and bring it to life on the canvas.</li>
+            <li>Guess in room chat. Earlier correct guesses earn more points.</li>
+            <li>Play through the rounds and see who finishes on top.</li>
+          </ol>
+        </section>
+        <section class="details" aria-label="More about Kupo Skribbl">
+          <div>
+            <h2>Make the room yours</h2>
+            <p>Choose the timer, rounds and word lists. Draw with FFXIV prompts, everyday objects, memes, video games or your own custom words. Create a portrait and invite friends to play.</p>
+          </div>
+          <div>
+            <h2>Find out more</h2>
+            <p>The <a href="https://github.com/cloudesh/kupopop">Kupopop repository</a> has the installation guide, privacy information and source code. Read the <a href="https://github.com/cloudesh/kupopop/releases">release notes</a> or <a href="https://github.com/cloudesh/kupopop/issues">report an issue</a>.</p>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <p>Kupo Skribbl / Kupopop · Made by <a href="https://github.com/cloudesh">cloudesh</a>.</p>
+      <p>Not affiliated with Square Enix or skribbl.io. FINAL FANTASY XIV is a trademark of Square Enix.</p>
+    </footer>
+  </div>
+</body>
+</html>
