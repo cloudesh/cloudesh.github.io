@@ -20,3 +20,7 @@ players.
 
 Preserve the canonical homepage URL, verification file, `robots.txt` and sitemap.
 Keep search descriptions accurate, and never add invented ratings or reviews.
+
+Keep the writing direct: explain the game, installation and privacy without
+marketing slogans or repeated search phrases. Decorative details use simple
+ink outlines and uneven paper edges. Do not restore the starburst symbols.

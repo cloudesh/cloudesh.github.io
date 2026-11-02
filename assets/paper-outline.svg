@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" preserveAspectRatio="none" fill="none">
+  <path d="M5 7Q113 4 224 6T450 5T675 7T895 5Q892 78 895 151T894 300T896 451L894 594Q782 591 672 594T449 593T225 595T5 593Q8 521 5 448T6 298T4 149L5 7Z" stroke="#6a5d4f" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+  <path d="M10 9q151-2 258 0M893 425l-2 165q-70 4-138 2M6 67l2 154" stroke="#6a5d4f" stroke-opacity=".24" stroke-width="1" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+</svg>
